@@ -1,6 +1,8 @@
 # discord-webhook-destroyer
 Simple python scripts to spam any discord web-hook. Not to be used maliciously.
 
-# Usage
+# Installation
 pip install -r requirements.txt/n
+
+# Usage
 python3 main.py
