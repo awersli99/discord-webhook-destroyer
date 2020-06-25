@@ -21,17 +21,17 @@ def sendtowebhook(webhook, message, username):
 
 
 webhook = input('What is the webhook link?: ')
-if webhook == '':
+if webhook == '': # script will not work without specifying a webhook link, so exit
     print('You need to specify a webhook link for this to work, exiting...')
     exit()
 
 username = input('What would you like the username to be?: ')
-if username == '':
+if username == '': # no username will default to a specified default
     username = defaultusername
     print('Using default username...')
 
 message = input('What message would you like to send?: ')
-if message == '':
+if message == '': # no message will cause the webhook message not to send, so default to specified default
     message = defaultmessage
     print('Using default message...')
 
