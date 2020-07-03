@@ -15,23 +15,23 @@ def sendtowebhook(webhook, message, username):
     try:
         while True:
             requests.post(webhook, data=data)
-    except KeyboardInterrupt: # prevents error trace on keyboardinterrupt and exits cleanly
+    except KeyboardInterrupt:  # prevents error trace on keyboardinterrupt and exits cleanly
         print('\nExiting destroyer...')
         exit()
 
 
 webhook = input('What is the webhook link?: ')
-if webhook == '': # script will not work without specifying a webhook link, so exit
+if webhook == '':  # script will not work without specifying a webhook link, so exit
     print('You need to specify a webhook link for this to work, exiting...')
     exit()
 
 username = input('What would you like the username to be?: ')
-if username == '': # no username will default to a specified default
+if username == '':  #  no username will default to a specified default
     username = defaultusername
     print('Using default username...')
 
 message = input('What message would you like to send?: ')
-if message == '': # no message will cause the webhook message not to send, so default to specified default
+if message == '':  # no message will cause the webhook message not to send, so default to specified default
     message = defaultmessage
     print('Using default message...')
 
