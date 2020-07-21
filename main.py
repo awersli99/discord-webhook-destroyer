@@ -16,7 +16,6 @@ def sendtowebhook(webhook, message, username):
         while True:
             requests.post(webhook, data=data)
     except KeyboardInterrupt:  # prevents error trace on keyboardinterrupt and exits cleanly
-        print('\nExiting destroyer...')
         exit()
 
 
